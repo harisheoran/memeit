@@ -8,3 +8,7 @@ Tech Stack
 - Picasso Library
 
 View [beta](https://github.com/sheoranharis/memeit/tree/dev) version.
+
+
+<img align="right" src="readmeAssets/day23-2.jpg" width="200">
+<img align="center" src="readmeAssets/day23-3.jpg" width="200">
