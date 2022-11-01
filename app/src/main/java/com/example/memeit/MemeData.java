@@ -102,7 +102,7 @@ public class MemeData {
             }
             // our list
             ArrayList<Meme> memeslist = new ArrayList<>();
-
+            String postImg = "";
             try {
                 JSONObject baseJsonResponse = new JSONObject(jsonresponse);
                 JSONObject dataResponse2nd = baseJsonResponse.getJSONObject("data");
@@ -117,7 +117,12 @@ public class MemeData {
                         JSONObject dataChildofArrayChild = arrayChild.getJSONObject("data");
 
                         String title = dataChildofArrayChild.getString("title");
-                        String postImg = dataChildofArrayChild.getString("url_overridden_by_dest");
+
+                        if(dataChildofArrayChild.has("url_overridden_by_dest")){
+                            postImg = dataChildofArrayChild.getString("url_overridden_by_dest");
+                        }else{
+                            postImg = "https://raw.githubusercontent.com/sheoranharis/sheoranharis.github.io/main/static/img/projects/memeit.png";
+                        }
 
                         memeslist.add( new Meme(postImg, title));
                     }

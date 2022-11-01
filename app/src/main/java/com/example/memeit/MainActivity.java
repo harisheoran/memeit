@@ -16,7 +16,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = MainActivity.class.getSimpleName();
-    private static final String REDDIT_API_URL = "https://www.reddit.com/r/memes/.json";
+  //  private static final String REDDIT_API_URL = "https://www.reddit.com/r/memes/.json";
+    private static final String REDDIT_API_URL = "https://www.reddit.com/r/ProgrammerHumor/hot/.json";
     private MemeAdapter memeAdapter;
     private TextView mEmptyTextView;
     private ProgressBar mLoadingBar;
