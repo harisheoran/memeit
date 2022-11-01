@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">memeit</string>
+    <string name="no_memes">No Memes</string>
+    <string name="no_internet_connection"/>
+</resources>
