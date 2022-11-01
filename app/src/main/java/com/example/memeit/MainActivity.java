@@ -30,13 +30,9 @@ public class MainActivity extends AppCompatActivity {
         mEmptyTextView = findViewById(R.id.empty_TextView);
         listView.setEmptyView(mEmptyTextView);
 
-
-
         memeAdapter = new MemeAdapter(this, new ArrayList<Meme>());
 
         listView.setAdapter(memeAdapter);
-
-
 
         // Get a reference to the ConnectivityManager to check state of network connectivity
         ConnectivityManager connMgr = (ConnectivityManager)
