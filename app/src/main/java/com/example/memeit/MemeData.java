@@ -120,11 +120,10 @@ public class MemeData {
 
                         if(dataChildofArrayChild.has("url_overridden_by_dest")){
                             postImg = dataChildofArrayChild.getString("url_overridden_by_dest");
+                            memeslist.add(new Meme(postImg, title));
                         }else{
-                            postImg = "https://raw.githubusercontent.com/sheoranharis/sheoranharis.github.io/main/static/img/projects/memeit.png";
+                            memeslist.add(new Meme(title));
                         }
-
-                        memeslist.add( new Meme(postImg, title));
                     }
                     return memeslist;
                 }
