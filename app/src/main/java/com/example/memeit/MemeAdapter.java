@@ -43,4 +43,5 @@ public class MemeAdapter extends ArrayAdapter<Meme> {
 
             return listItemView;
         }
+
 }
