@@ -2,18 +2,24 @@ package com.example.memeit;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.squareup.picasso.Picasso;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -37,11 +43,10 @@ public class MemeAdapter extends ArrayAdapter<Meme> {
             postTitleView.setText(currentPost.getTitle());
 
             ImageView postIMGView = (ImageView) listItemView.findViewById(R.id.post_img);
-            String postImg = currentPost.getPostImg();
+            String postImgUrl = currentPost.getPostImg();
 
-            Picasso.get().load(postImg).into(postIMGView);
+            Picasso.get().load(postImgUrl).into(postIMGView);
 
             return listItemView;
         }
-
 }

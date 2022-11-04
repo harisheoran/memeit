@@ -1,13 +1,16 @@
 package com.example.memeit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,7 +42,20 @@ public class WholeSomeMemesFragment extends Fragment {
         //listView.setEmptyView(mEmptyTextView);
         memeAdapter = new MemeAdapter(getActivity(), new ArrayList<Meme>());
         listView.setAdapter(memeAdapter);
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l){
+                // find the current meme that was clicked on
+                Meme currentMeme = memeAdapter.getItem(position);
+                String memeUrl = currentMeme.getMemeUrl();
+                Uri memeUri = Uri.parse(memeUrl);
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, memeUrl);
+                shareIntent.setType("image/jpeg");
+                startActivity(Intent.createChooser(shareIntent, null));
+            }
+        });
         // Get a reference to the ConnectivityManager to check state of network connectivity
         ConnectivityManager connMgr = (ConnectivityManager)
                 getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

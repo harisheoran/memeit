@@ -117,10 +117,10 @@ public class MemeData {
                         JSONObject dataChildofArrayChild = arrayChild.getJSONObject("data");
 
                         String title = dataChildofArrayChild.getString("title");
-
+                      //  String memeUrl = dataChildofArrayChild.getString("url_overridden_by_dest");
                         if(dataChildofArrayChild.has("url_overridden_by_dest")){
                             postImg = dataChildofArrayChild.getString("url_overridden_by_dest");
-                            memeslist.add(new Meme(postImg, title));
+                            memeslist.add(new Meme(postImg, title, postImg));
                         }else{
                             memeslist.add(new Meme(title));
                         }
