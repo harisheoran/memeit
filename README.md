@@ -9,6 +9,7 @@ Tech Stack
 
 View [beta](https://github.com/sheoranharis/memeit/tree/dev) version.
 
+[Download](https://github.com/sheoranharis/memeit/releases) memeit-beta 
 
 <img align="right" src="readmeAssets/day23-2.jpg" width="200">
 <img align="center" src="readmeAssets/day23-3.jpg" width="200">
