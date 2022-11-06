@@ -1,7 +1,7 @@
 ### memeit
 An Android app for browsing memes.
 
-Android App v-0.0.1
+Android App v0.0.1-beta
 Tech Stack 
 - Java
 - Android SDK
