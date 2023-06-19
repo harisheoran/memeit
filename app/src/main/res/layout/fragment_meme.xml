@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="viewmodel" type="com.example.memeit.MainViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.MemeFragment">
+
+        <ImageView android:layout_width="match_parent"
+                   app:setImage="@{viewmodel.memeDetails.url}"
+                   android:layout_height="wrap_content"
+                   android:scaleType="fitCenter"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" android:id="@+id/imageView"
+                   app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/textView"
+                   app:layout_constraintVertical_chainStyle="packed"/>
+        <TextView
+                android:text="@{viewmodel.memeDetails.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

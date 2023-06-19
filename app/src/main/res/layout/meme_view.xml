@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="memeImage" type="com.example.memeit.network.Meme"/>
+    </data>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/meme_image_view"
+            app:setImage="@{memeImage.url}"
+            tools:layout_editor_absoluteY="78dp"
+            tools:layout_editor_absoluteX="128dp"/>
+
+</layout>
