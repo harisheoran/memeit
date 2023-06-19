@@ -31,6 +31,7 @@ class MainViewModel : ViewModel() {
         _memeDetails.value = meme
     }
 
+
     init {
         getMemesFromApi()
     }
