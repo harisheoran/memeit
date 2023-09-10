@@ -4,16 +4,30 @@
     <data>
         <variable name="memeImage" type="com.example.memeit.network.Meme"/>
     </data>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/character_image_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="128dp"
+        android:layout_marginTop="32dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:padding="8dp"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars"
             android:id="@+id/meme_image_view"
             app:setImage="@{memeImage.url}"
             tools:layout_editor_absoluteY="78dp"
             tools:layout_editor_absoluteX="128dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
 </layout>
